@@ -11,14 +11,14 @@ const imageBuffer = Buffer.from(imageBase64, 'base64');
 // Upload the image
 writeFileSync("test.jpg",imageBuffer)
 
-axios.post('http://localhost:3000/upload', {image:imageBuffer}, {
+axios.post('https://image-production-a0af.up.railway.app/upload', {image:imageBuffer}, {
 })
   .then((response) => {
     const { id } = response.data;
     console.log(`Image uploaded with ID: ${id}`);
 
     // Get the URL of the uploaded image
-    axios.get(`http://localhost:3000/get/${id}`)
+    axios.get(`https://image-production-a0af.up.railway.app/get/${id}`)
       .then((response) => {
         const { url } = response.data;
         console.log(`Image URL: ${url}`);

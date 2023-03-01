@@ -63,7 +63,7 @@ app.post('/upload', upload.single('image'), (req, res) => {
 app.get('/get/:id', (req, res) => {
     const { id } = req.params;
     const filename = `${id}.png`;
-    const url = `http://localhost:${PORT}/file/file/${filename}`;
+    const url = `/file/file/${filename}`;
 
     // Check if the file exists
     fs.access("./file/"+filename, fs.constants.F_OK, (err) => {
