@@ -7,5 +7,6 @@
       { "src": "/file/(.*)", "dest": "/file/$1" },
       { "src": "/(.*)", "dest": "app.js" }
     ],
-    "public": { "directory": "file", "rewrites": [{ "source": "/file/(.*)", "destination": "/file/$1" }] }
+    "public": true
   }
+  
