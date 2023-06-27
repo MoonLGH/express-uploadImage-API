@@ -1,11 +1,11 @@
 {
-    "version":2,
-    "builds":[{
-        "src":"app.js",
-        "use":"@vercel/node"
-    }],
-    "routes":[{
-        "src":"/(.*)",
-        "dest":"app.js"
-    }]
-}
+    "version": 2,
+    "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/file/(.*)", "dest": "/file/$1" },
+      { "src": "/(.*)", "dest": "app.js" }
+    ],
+    "public": { "directory": "file", "rewrites": [{ "source": "/file/(.*)", "destination": "/file/$1" }] }
+  }
