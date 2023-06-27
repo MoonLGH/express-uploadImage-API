@@ -6,7 +6,6 @@
     "routes": [
       { "src": "/file/(.*)", "dest": "/file/$1" },
       { "src": "/(.*)", "dest": "app.js" }
-    ],
-    "public": true
+    ]
   }
   
